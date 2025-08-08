@@ -1,0 +1,53 @@
+.header {
+  background-color: #204080;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.logo-large {
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.logo-large:hover {
+  transform: scale(1.05);
+}
+
+.titulo {
+  font-size: 1.8rem;
+  color: white;
+  font-weight: 700;
+}
+
+.logo-title {
+  margin-top: 2rem; /* separa del top */
+}
+
+@media (max-width: 768px) {
+  .logo-title {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-large {
+    height: 100px;
+    width: 100px;
+  }
+
+  .titulo {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
