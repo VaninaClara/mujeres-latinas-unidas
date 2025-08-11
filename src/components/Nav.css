@@ -1,6 +1,6 @@
 .navbar {
   background-color: #1f3a93;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,8 +20,8 @@
 }
 
 .navbar-logo img {
-  height: 60px;
-  width: 60px;
+  height: 85px;
+  width: 85px;
   object-fit: cover;
   border-radius: 50%;
   transition: transform 0.3s ease;

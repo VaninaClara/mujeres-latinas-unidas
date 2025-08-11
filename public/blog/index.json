@@ -1,0 +1,19 @@
+[
+  {
+    "slug": "mlu-presentacion",
+    "title": "Presentación Mujeres Latinas Unidas+",
+    "date": "2025-08-11",
+    "excerpt": "Quiénes somos, nuestra misión y cómo podés sumarte a Mujeres Latinas Unidas+.",
+    "cover": "/blog/covers/presentacion.jpg",
+    "tags": ["institucional", "comunidad"]
+  },
+  {
+  "slug": "evento-comunidad",
+  "title": "Encuentro Comunitario 2025",
+  "date": "2025-08-05",
+  "excerpt": "Resumen de nuestro último encuentro comunitario: talleres, testimonios y nuevos proyectos.",
+  "cover": "/blog/covers/evento-comunidad.jpg",
+  "tags": ["eventos", "comunidad"]
+}
+
+]

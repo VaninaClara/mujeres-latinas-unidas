@@ -6,6 +6,8 @@ import Home from "./pages/Home";
 import QuienesSomos from "./pages/QuienesSomos";
 import Programas from "./pages/Programas";
 import Contacto from "./pages/Contacto";
+import Blog from "./pages/Blog";
+import Post from "./pages/Post";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route path="/quienes-somos" element={<QuienesSomos />} />
           <Route path="/programas" element={<Programas />} />
           <Route path="/contacto" element={<Contacto />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<Post />} />
         </Routes>
       </main>
 

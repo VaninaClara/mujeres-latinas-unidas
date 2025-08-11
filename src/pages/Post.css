@@ -1,0 +1,12 @@
+.post { padding: 3rem 1.5rem; font-family:'Poppins',sans-serif; }
+.post__container { max-width: 850px; margin: 0 auto; }
+.post__back a { color:#1f3a93; text-decoration:none; }
+.post__back a:hover { text-decoration:underline; }
+
+.post__content h1,h2,h3 { color:#1f3a93; margin:1.2rem 0 .6rem; }
+.post__content p, .post__content li { line-height:1.7; color:#333; }
+.post__content img { max-width:100%; border-radius:10px; }
+.post__content blockquote {
+  border-left:4px solid #ffd45a; padding:.5rem 1rem; color:#444; background:#fff9e6; border-radius:6px;
+}
+.post__content pre { background:#0d1117; color:#e6edf3; padding:1rem; border-radius:10px; overflow:auto; }
