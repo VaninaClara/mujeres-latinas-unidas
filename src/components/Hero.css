@@ -1,0 +1,87 @@
+.hero {
+  min-height: 68vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 1.25rem;
+  color: #fff;
+  text-align: center;
+}
+
+.hero__content {
+  max-width: 900px;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin: 0 auto 1.75rem;
+  max-width: 760px;
+}
+
+.hero__actions {
+  display: inline-flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  padding: 0.9rem 1.4rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.btn--primary {
+  background: #ffd45a;          /* dorado cálido */
+  color: #203a80;               /* azul institucional */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+}
+
+.btn--primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+}
+
+.btn--secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.btn--secondary:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* Responsive */
+@media (max-width: 920px) {
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+  .hero p {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 60vh;
+    padding: 3rem 1rem;
+  }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+}

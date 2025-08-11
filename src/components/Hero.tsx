@@ -1,16 +1,35 @@
+import { Link } from "react-router-dom";
+import "./Hero.css";
+import heroImg from "../assets/mujeres-temporal.jpg"; // poné aquí tu imagen (temporal)
+
 const Hero = () => {
   return (
-    <section style={{
-      padding: '4rem 2rem',
-      textAlign: 'center',
-      background: '#f7f7ff'
-    }}>
-      <h2 style={{ fontSize: '2.2rem', marginBottom: '1rem' }}>
-        Unidas para transformar realidades
-      </h2>
-      <p style={{ fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto' }}>
-        Mujeres Latinas Unidas+ es una comunidad de acompañamiento, formación y liderazgo que busca empoderar desde la acción colectiva.
-      </p>
+    <section
+      className="hero"
+      style={{
+        backgroundImage: `linear-gradient(
+          rgba(32, 64, 128, 0.65),
+          rgba(32, 64, 128, 0.65)
+        ), url(${heroImg})`,
+      }}
+      aria-label="Presentación Mujeres Latinas Unidas+"
+    >
+      <div className="hero__content">
+        <h1>Unidas para transformar realidades</h1>
+        <p>
+          Acompañamos, formamos y potenciamos el liderazgo de mujeres latinas
+          para impulsar cambios reales en sus comunidades.
+        </p>
+
+        <div className="hero__actions">
+          <Link to="/programas" className="btn btn--primary" aria-label="Ver programas">
+            Sumate
+          </Link>
+          <Link to="/contacto" className="btn btn--secondary" aria-label="Ir a contacto para donar">
+            Doná
+          </Link>
+        </div>
+      </div>
     </section>
   );
 };

@@ -1,10 +1,11 @@
 import Hero from '../components/Hero';
+import ProgramasPreview from "../components/ProgramasPreview";
 
 const Home = () => {
   return (
     <>
       <Hero />
-      {/* Acá podemos agregar más secciones luego */}
+      <ProgramasPreview />
     </>
   );
 };
