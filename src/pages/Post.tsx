@@ -10,14 +10,20 @@ export default function Post() {
 
   useEffect(() => {
     if (!slug) return;
-    fetch(`/blog/${slug}.md`)
-      .then(r => r.text())
-      .then(md => {
-        const raw = marked.parse(md);
-        const safe = DOMPurify.sanitize(raw);
+
+    (async () => {
+      try {
+        const res = await fetch(`/blog/${slug}.md`);
+        const md = await res.text();
+
+        // 👇 OJO: await porque parse puede ser async
+        const raw = await marked.parse(md);
+        const safe = DOMPurify.sanitize(raw as string);
         setHtml(safe);
-      })
-      .catch(() => setHtml("<p>No se encontró el artículo.</p>"));
+      } catch {
+        setHtml("<p>No se encontró el artículo.</p>");
+      }
+    })();
   }, [slug]);
 
   return (
@@ -31,3 +37,4 @@ export default function Post() {
     </section>
   );
 }
+
