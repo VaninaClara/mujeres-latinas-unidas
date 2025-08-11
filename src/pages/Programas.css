@@ -52,3 +52,17 @@
   background: #ffd700;
   color: #1f3a93;
 }
+
+.programas-card img {
+  width: 100%; /* ocupa todo el ancho del contenedor */
+  height: 180px; /* altura fija para que todas sean iguales */
+  object-fit: cover; /* recorta sin deformar */
+  border-radius: 8px 8px 0 0; /* redondea solo arriba */
+  display: block;
+}
+
+/* Efecto al pasar el mouse */
+.programas-card:hover img {
+  transform: scale(1.05); /* hace zoom suave */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* sombra */
+}

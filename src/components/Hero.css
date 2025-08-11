@@ -1,87 +1,91 @@
 .hero {
-  min-height: 68vh;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 85vh;
+  padding: 2rem;
   background-size: cover;
   background-position: center;
-  padding: 4rem 1.25rem;
-  color: #fff;
+  background-repeat: no-repeat;
+  color: white;
   text-align: center;
 }
 
 .hero__content {
   max-width: 900px;
+  z-index: 2;
 }
 
 .hero h1 {
-  font-size: 2.6rem;
-  line-height: 1.2;
-  margin-bottom: 1rem;
+  font-size: 3rem;
   font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
 }
 
 .hero p {
-  font-size: 1.15rem;
-  line-height: 1.7;
-  margin: 0 auto 1.75rem;
-  max-width: 760px;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
 .hero__actions {
-  display: inline-flex;
+  display: flex;
   gap: 1rem;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
-/* Botones */
-.btn {
-  display: inline-block;
-  padding: 0.9rem 1.4rem;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
-}
-
+/* Botón primario */
 .btn--primary {
-  background: #ffd45a;          /* dorado cálido */
-  color: #203a80;               /* azul institucional */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+  background-color: #ffd700;
+  color: #1f3a93;
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .btn--primary:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+  background-color: #f1c40f;
 }
 
+/* Botón secundario */
 .btn--secondary {
-  background: transparent;
-  color: #fff;
-  border: 2px solid #fff;
+  border: 2px solid white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
 }
 
 .btn--secondary:hover {
-  background: rgba(255,255,255,0.15);
+  background-color: white;
+  color: #1f3a93;
 }
 
-/* Responsive */
-@media (max-width: 920px) {
-  .hero h1 {
-    font-size: 2.1rem;
-  }
-  .hero p {
-    font-size: 1.05rem;
+/* Animación */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (max-width: 600px) {
+/* Oscurecer un poco más la imagen en móviles para mayor legibilidad */
+@media (max-width: 768px) {
   .hero {
-    min-height: 60vh;
-    padding: 3rem 1rem;
+    min-height: 70vh;
   }
+
   .hero h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
   }
 }

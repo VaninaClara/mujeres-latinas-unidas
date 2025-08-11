@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import "./Hero.css";
-import heroImg from "../assets/mujeres-ejemplo.jpg"; // poné aquí tu imagen (temporal)
 
 const Hero = () => {
   return (
@@ -10,7 +9,7 @@ const Hero = () => {
         backgroundImage: `linear-gradient(
           rgba(32, 64, 128, 0.65),
           rgba(32, 64, 128, 0.65)
-        ), url(${heroImg})`,
+        ), url("/assets/hero-bg.jpg")`,
       }}
       aria-label="Presentación Mujeres Latinas Unidas+"
     >
@@ -22,10 +21,10 @@ const Hero = () => {
         </p>
 
         <div className="hero__actions">
-          <Link to="/programas" className="btn btn--primary" aria-label="Ver programas">
+          <Link to="/programas" className="btn btn--primary">
             Sumate
           </Link>
-          <Link to="/contacto" className="btn btn--secondary" aria-label="Ir a contacto para donar">
+          <Link to="/contacto" className="btn btn--secondary">
             Doná
           </Link>
         </div>
@@ -35,3 +34,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
