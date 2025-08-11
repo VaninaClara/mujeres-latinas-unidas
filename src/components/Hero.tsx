@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Hero.css";
-import heroImg from "../assets/mujeres-temporal.jpg"; // poné aquí tu imagen (temporal)
+import heroImg from "../assets/mujeres-ejemplo.jpg"; // poné aquí tu imagen (temporal)
 
 const Hero = () => {
   return (

@@ -5,27 +5,99 @@
   justify-content: space-between;
   align-items: center;
   font-family: 'Poppins', sans-serif;
+  position: relative;
+  z-index: 1000;
 }
 
 .navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 1.5rem;
   font-weight: 700;
   color: white;
 }
 
-.navbar-links {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
+.navbar-logo img {
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
 }
 
-.navbar-links a {
-  color: white;
+.navbar-logo img:hover {
+  transform: scale(1.05);
+}
+
+.navbar-links{
+  display:flex;
+  gap:1.5rem;
+  list-style: none;      /* quita viñetas */
+  margin:0;             /* quita margen ul por defecto */
+  padding:0; 
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgba(0,0,0,.25);
+  backdrop-filter: blur(6px);           /* quita padding ul por defecto */
+}
+.navbar-links a{
+  color:#fff;           /* blanco, no azul por defecto */
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  font-weight:500;
 }
 
 .navbar-links a:hover {
   color: #ffd700;
 }
+
+/* Botón hamburguesa */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive */
+@media (max-width:768px){
+  .hamburger{ display:flex; margin-left:auto; }
+
+  .navbar-links{
+    position:absolute;
+    top:70px;            /* altura de la barra */
+    right:0;
+    background:#203a80;
+    flex-direction:column;
+    align-items:flex-start;
+    width:220px;
+    padding:1rem;
+    transform:translateX(100%);   /* OCULTO por defecto */
+    transition:transform .3s ease-in-out;
+    box-shadow:0 8px 24px rgba(0,0,0,.2);
+    border-top-left-radius:.75rem;
+    border-bottom-left-radius:.75rem;
+    z-index:1000;
+  }
+  .navbar-links.open{ transform:translateX(0); }  /* visible al abrir */
+  .navbar-links li{ margin:.5rem 0; }
+  .navbar-links a{ color:#fff; }
+}
+

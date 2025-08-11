@@ -9,6 +9,7 @@ import Nav from './components/Nav';
 
 
 
+
 function App() {
   return (
     <>
@@ -17,8 +18,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/" element={<Home />} />
-  <Route path="/programas" element={<Programas />} />
-  <Route path="/contacto" element={<Contacto />} />
+        <Route path="/programas" element={<Programas />} />
+        <Route path="/contacto" element={<Contacto />} />
         <Route path="/quienes-somos" element={<QuienesSomos />} />
       </Routes>
       <Footer />
