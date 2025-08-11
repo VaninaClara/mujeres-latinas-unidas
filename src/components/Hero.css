@@ -1,34 +1,48 @@
+/* ============ HERO ============ */
 .hero {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  /* altura y fondo */
   min-height: 85vh;
+  margin: 0;
   padding: 2rem;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: white;
+
+  color: #fff;
   text-align: center;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
 }
 
+/* Contenido centrado */
 .hero__content {
   max-width: 900px;
   z-index: 2;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
 }
 
+/* Título y párrafo */
 .hero h1 {
   font-size: 3rem;
   font-weight: 800;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem 0;
   line-height: 1.2;
 }
 
 .hero p {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  margin: 0 0 2rem 0;
+  line-height: 1.6;
 }
 
+/* Acciones (botones) */
 .hero__actions {
   display: flex;
   gap: 1rem;
@@ -36,56 +50,92 @@
   flex-wrap: wrap;
 }
 
-/* Botón primario */
-.btn--primary {
-  background-color: #ffd700;
-  color: #1f3a93;
-  padding: 0.75rem 1.5rem;
+/* — Botones del hero: misma CAJA exacta — */
+.hero__actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 48px;            /* misma altura */
+  min-width: 130px;        /* mismo ancho mínimo */
+  padding: 0 22px;         /* solo horizontal; la altura la da "height" */
+  line-height: 1;          /* evita crecer por línea */
+
+  font-size: 1rem;
   font-weight: 700;
-  border-radius: 50px;
+
+  border-radius: 999px;
+  box-sizing: border-box;
+
+  /* ambos con borde → el secundario lo muestra, el primario lo tiene transparente */
+  border: 2px solid transparent;
+
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: transform .2s ease, background-color .2s ease, color .2s ease;
 }
 
-.btn--primary:hover {
-  background-color: #f1c40f;
+/* Primario (relleno) */
+.hero__actions .btn--primary {
+  background-color: #f1a93d;   /* dorado */
+  color: #1b1b1b;
+  border-color: transparent;
+  margin-top: 0;               /* por si alguna regla externa lo empuja */
 }
 
-/* Botón secundario */
-.btn--secondary {
-  border: 2px solid white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 50px;
-  font-weight: 700;
-  text-decoration: none;
-  color: white;
-  transition: all 0.3s ease;
+/* Secundario (outline) */
+.hero__actions .btn--secondary {
+  background: transparent;
+  color: #ffffff;
+  border-color: #ffffff;       /* solo cambia el color del borde */
 }
 
-.btn--secondary:hover {
-  background-color: white;
-  color: #1f3a93;
+.hero__actions .btn:hover {
+  transform: scale(1.03);
 }
 
-/* Animación */
+/* ============ Animación ============ */
 @keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Oscurecer un poco más la imagen en móviles para mayor legibilidad */
+/* ============ Responsive ============ */
 @media (max-width: 768px) {
   .hero {
     min-height: 70vh;
+    padding: 1.5rem;
   }
 
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
+  .hero h1 { font-size: 2rem; }
+  .hero p  { font-size: 1rem; }
 }
+
+/* Fuerza exacta en los botones del Hero */
+section.hero .hero__actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px !important;
+  min-width: 130px !important;
+  padding: 0 22px !important;   /* solo lateral */
+  line-height: 1 !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  border-radius: 999px !important;
+  box-sizing: border-box !important;
+  border: 2px solid transparent !important;
+}
+
+section.hero .hero__actions .btn--primary {
+  background: #f1a93d !important;
+  color: #1b1b1b !important;
+  border-color: transparent !important;
+  margin-top: 0 !important;     /* ← anula el margen que ves en DevTools */
+}
+
+section.hero .hero__actions .btn--secondary {
+  background: transparent !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
