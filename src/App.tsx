@@ -8,6 +8,7 @@ import Programas from "./pages/Programas";
 import Contacto from "./pages/Contacto";
 import Blog from "./pages/Blog";
 import Post from "./pages/Post";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       </main>
 
       <Footer />
+      <ScrollToTopButton />
     </>
   );
 }
