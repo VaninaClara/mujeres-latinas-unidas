@@ -1,42 +1,38 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "./ScrollToTopButton.css";
 
 const ScrollToTopButton = () => {
-  const [visible, setVisible] = useState(false);
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
-  // Mostrar botón cuando se baja cierto scroll
   useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.scrollY > 300) {
-        setVisible(true);
-      } else {
-        setVisible(false);
-      }
-    };
-
-    window.addEventListener("scroll", toggleVisibility);
-    return () => window.removeEventListener("scroll", toggleVisibility);
+    window.scrollTo(0, 0);
   }, []);
 
-  // Subir suavemente y a ver si funciona la reconcha
-  function scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-        });
-    }
-
   return (
-    visible && (
-      <button
-        className="scroll-to-top"
-        onClick={scrollToTop}
-        aria-label="Subir al inicio"
+    <button
+      className="scroll-to-top"
+      onClick={scrollToTop}
+      aria-label="Volver arriba"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={2}
+        stroke="white"
+        className="arrow-icon"
       >
-        ↑
-      </button>
-    )
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M5 15l7-7 7 7"
+        />
+      </svg>
+    </button>
   );
 };
 
 export default ScrollToTopButton;
+

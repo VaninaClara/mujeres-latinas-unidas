@@ -2,21 +2,26 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #1f3a93; /* azul */
-  color: #fff;
-  border: none;
-  border-radius: 50%;
   width: 45px;
   height: 45px;
-  font-size: 1.5rem;
+  background-color: #f1a93d;
+  border: none;
+  border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  z-index: 1100;
-  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 2000;
 }
 
 .scroll-to-top:hover {
-  background: #ffd700; /* dorado */
-  color: #1f3a93; /* azul */
+  background-color: #e28a1c;
   transform: scale(1.1);
+}
+
+.arrow-icon {
+  width: 20px;
+  height: 20px;
 }
