@@ -1,14 +1,22 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./ScrollToTopButton.css";
 
 const ScrollToTopButton = () => {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setVisible(window.scrollY > 50); // Muestra el botón después de 200px de scroll
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  if (!visible) return null;
 
   return (
     <button
@@ -35,4 +43,5 @@ const ScrollToTopButton = () => {
 };
 
 export default ScrollToTopButton;
+
 
