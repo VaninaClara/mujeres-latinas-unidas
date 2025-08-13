@@ -1,67 +1,80 @@
 .programas-preview {
-  padding: 4rem 1.5rem;
-  background: #f8f9fc;
+  padding: 2.5rem 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.programas-header {
   text-align: center;
+  max-width: 900px;
+  margin: 0 auto 1.5rem;
 }
 
 .programas-header h2 {
+  margin: 0 0 .4rem;
   font-size: 2rem;
-  margin-bottom: 0.5rem;
+  color: #1f3a93;
   font-weight: 800;
-  color: #203a80;
 }
 
 .programas-header p {
-  font-size: 1.1rem;
-  color: #444;
-  max-width: 600px;
-  margin: 0 auto 2.5rem;
+  color: #58607a;
 }
 
 .programas-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.8rem;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
 }
 
 .programa-card {
   background: #fff;
-  border-radius: 1rem;
-  padding: 2rem 1.5rem;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 14px;
+  box-shadow: 0 10px 26px rgba(0,0,0,.07);
+  padding: 1rem;
+  text-align: center;
+  transition: transform .25s ease, box-shadow .25s ease;
 }
 
 .programa-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 16px 34px rgba(0,0,0,.12);
 }
 
-.programa-icon {
-  font-size: 2.4rem;
-  margin-bottom: 1rem;
+.programa-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: .85rem;
 }
 
 .programa-card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-  color: #203a80;
+  color: #1f3a93;
+  margin: 0 0 .4rem;
+  font-size: 1.15rem;
 }
 
 .programa-card p {
-  font-size: 1rem;
-  color: #555;
+  color: #4b546a;
+  margin: 0;
 }
 
 .programas-cta {
-  margin-top: 3rem;
+  text-align: center;
+  margin-top: 1.8rem;
 }
 
-.programas-cta .btn--primary {
-  background: #ffd45a;
-  color: #203a80;
+/* Botón base (si ya tenés .btn, podés omitir esto) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .75rem 1.25rem;
+  border-radius: 999px;
+  text-decoration: none;
   font-weight: 700;
-  padding: 0.9rem 1.6rem;
 }
+.btn--primary { background: #ffd45a; color: #203a80; }
+.btn--primary:hover { filter: brightness(.97); }

@@ -1,68 +1,41 @@
-.programas-section {
-  padding: 4rem 2rem;
-  text-align: center;
-  background: #f8f9fa;
-}
-
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #1f3a93;
-}
-
 .programas-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .programa-card {
-  background: white;
+  background: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  padding: 1.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,.08);
+  text-align: center;
+  transition: transform .25s ease, box-shadow .25s ease;
 }
 
 .programa-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
 }
 
 .programa-img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  height: 180px;        /* controla altura */
+  object-fit: cover;    /* recorte elegante */
   border-radius: 10px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
-.programa-btn {
-  background: #1f3a93;
-  color: white;
-  border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s ease;
+.programas-section {
+  text-align: center; /* centra el título y todo el contenido */
+  padding: 2rem 1rem;
 }
 
-.programa-btn:hover {
-  background: #ffd700;
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
   color: #1f3a93;
+  font-weight: 700;
 }
 
-.programas-card img {
-  width: 100%; /* ocupa todo el ancho del contenedor */
-  height: 180px; /* altura fija para que todas sean iguales */
-  object-fit: cover; /* recorta sin deformar */
-  border-radius: 8px 8px 0 0; /* redondea solo arriba */
-  display: block;
-}
-
-/* Efecto al pasar el mouse */
-.programas-card:hover img {
-  transform: scale(1.05); /* hace zoom suave */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* sombra */
-}
