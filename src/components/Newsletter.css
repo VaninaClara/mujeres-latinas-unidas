@@ -1,0 +1,33 @@
+.newsletter {
+  background: #1f3a93;
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.newsletter h2 {
+  margin-bottom: 0.5rem;
+}
+
+.newsletter p {
+  margin-bottom: 1.5rem;
+}
+
+.newsletter__form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.newsletter__form input {
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: none;
+  width: 250px;
+  max-width: 100%;
+}
+
+.newsletter__form button {
+  padding: 0.75rem 1.5rem;
+}
