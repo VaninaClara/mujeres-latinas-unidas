@@ -1,0 +1,46 @@
+.brand-highlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #1f3a93, #203a80);
+  color: #fff;
+}
+
+.brand-highlight__logo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #ffd700;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.brand-highlight__logo:hover {
+  transform: scale(1.05);
+}
+
+.brand-highlight__text h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.brand-highlight__text p {
+  font-size: 1rem;
+  max-width: 500px;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .brand-highlight__logo {
+    width: 120px;
+    height: 120px;
+  }
+  .brand-highlight__text h2 {
+    font-size: 1.4rem;
+  }
+}
